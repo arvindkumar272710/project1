@@ -5,30 +5,12 @@ Resources:
       Properties:
         Name: "myLambdaFunction"
         Alias: "live"
-        CurrentVersion: "1"
-        TargetVersion: "2"
-hooks:
-  BeforeInstall:
-    - location: scripts/stopserver.sh
-      timeout: 300
-      runas: ec2-user
-  AfterInstall:
-    - location: scripts/installdependencies.sh
-      timeout: 300
-      runas: ec2-user
-  ApplicationStart:
-    - location: scripts/startserver.sh
-      timeout: 300
-      runas: ec2-user
+Hooks:
   BeforeAllowTraffic:
     - location: scripts/setupenvironment.sh
       timeout: 300
       runas: ec2-user
-      arguments:
-        - "blue"  # or "green", depending on the environment
   AfterAllowTraffic:
     - location: scripts/switchenvironment.sh
       timeout: 300
       runas: ec2-user
-      arguments:
-        - "green"  # or "blue", depending on the environment
