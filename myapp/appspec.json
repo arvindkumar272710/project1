@@ -1,0 +1,55 @@
+{
+  "version": 0,
+  "Resources": [
+    {
+      "myLambdaFunction": {
+        "Type": "AWS::Lambda::Function",
+        "Properties": {
+          "Name": "myLambdaFunction",
+          "Alias": "live"
+        }
+      }
+    }
+  ],
+  "Hooks": {
+    "BeforeAllowTraffic": [
+      {
+        "location": "scripts/setupenvironment.sh",
+        "timeout": 300,
+        "runas": "ec2-user"
+      }
+    ],
+    "AfterAllowTraffic": [
+      {
+        "location": "scripts/switchenvironment.sh",
+        "timeout":
+{
+  "version": 0,
+  "Resources": [
+    {
+      "myLambdaFunction": {
+        "Type": "AWS::Lambda::Function",
+        "Properties": {
+          "Name": "myLambdaFunction",
+          "Alias": "live"
+        }
+      }
+    }
+  ],
+  "Hooks": {
+    "BeforeAllowTraffic": [
+      {
+        "location": "scripts/setupenvironment.sh",
+        "timeout": 300,
+        "runas": "ec2-user"
+      }
+    ],
+    "AfterAllowTraffic": [
+      {
+        "location": "scripts/switchenvironment.sh",
+        "timeout": 300,
+        "runas": "ec2-user"
+      }
+    ]
+  }
+}
