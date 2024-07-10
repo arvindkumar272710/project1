@@ -1,0 +1,8 @@
+spring:
+  profiles: blue
+  datasource:
+    url: jdbc:mysql://blue-db.example.com:3306/dbname
+    username: blue_user
+    password: blue_password
+  api:
+    endpoint: https://blue-api.example.com

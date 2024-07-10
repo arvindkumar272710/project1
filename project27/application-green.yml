@@ -1,0 +1,8 @@
+spring:
+  profiles: green
+  datasource:
+    url: jdbc:mysql://green-db.example.com:3306/dbname
+    username: green_user
+    password: green_password
+  api:
+    endpoint: https://green-api.example.com
