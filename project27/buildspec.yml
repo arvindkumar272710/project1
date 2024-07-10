@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+  pre_build:
+    commands:
+      - echo Pre-build steps...
+  build:
+    commands:
+      - echo Build steps...
+      # Copy the appropriate configuration file to the build output
+      - if [ "$DEPLOY_ENV" == "blue" ]; then cp config-blue.json config.json; else cp config-green.json config.json; fi
+artifacts:
+  files:
+    - '**/*'
+    - 'config.json'
