@@ -1,0 +1,11 @@
+{
+    "environment": "green",
+    "database": {
+      "host": "green-db.example.com",
+      "port": 3306,
+      "username": "green_user",
+      "password": "green_password"
+    },
+    "apiEndpoint": "https://green-api.example.com"
+  }
+  

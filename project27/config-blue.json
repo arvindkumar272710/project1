@@ -1,0 +1,11 @@
+{
+    "environment": "blue",
+    "database": {
+      "host": "blue-db.example.com",
+      "port": 3306,
+      "username": "blue_user",
+      "password": "blue_password"
+    },
+    "apiEndpoint": "https://blue-api.example.com"
+  }
+  
