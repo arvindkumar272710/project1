@@ -14,14 +14,14 @@
   "Hooks": {
     "BeforeAllowTraffic": [
       {
-        "location": "scripts/setupenvironment.sh",
+        "location": "myapp/scripts/setupenvironment.sh",
         "timeout": 300,
         "runas": "ec2-user"
       }
     ],
     "AfterAllowTraffic": [
       {
-        "location": "scripts/switchenvironment.sh",
+        "location": "myapp/scripts/switchenvironment.sh",
         "timeout": 300,
         "runas": "ec2-user"
       }
